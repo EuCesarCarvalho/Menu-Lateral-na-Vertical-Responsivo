@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Vertical</title>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        
+        a {
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+            padding: 10px 5px;
+            display: block;
+        }
+        
+        body {
+            font-family: arial;
+            background-image: url("imagem.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            max-width: 100vw;
+            height: 100vh;
+        }
+        
+        ul {
+            list-style: none;
+            margin-left: 10px;
+            width: 100%;
+            margin-top: 60px;
+        }
+        
+        li {
+            padding: 10px;
+        }
+        
+        img {
+            margin-top: 5px;
+            margin-left: 5px;
+        }
+        
+        input[type="checkbox"]:checked~nav {
+            transform: translate(350px);
+        }
+        
+        input[type="checkbox"] {
+            display: none;
+        }
+        
+        nav {
+            background-color: rgba(16, 16, 16, .5);
+            width: 350px;
+            height: 100vh;
+            padding: 5px;
+            position: absolute;
+            left: -360px;
+            transition: all .5s;
+        }
+        
+        a:hover {
+            background-color: rgb(48, 48, 48);
+            color: rgb(255, 255, 255);
+        }
+        
+        label {
+            padding: 15px;
+            position: absolute;
+            z-index: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="checkbox" id="chec">
+    <label for="chec">
+        <img src="menu2.png" alt="menu">
+    </label>
+    <nav>
+        <ul>
+            <li><a href="">HOME</a></li>
+            <li><a href="">HTML5</a></li>
+            <li><a href="">SOBRE</a></li>
+            <li><a href="">CONTATO</a></li>
+        </ul>
+    </nav>
+</body>
+
+</html>
